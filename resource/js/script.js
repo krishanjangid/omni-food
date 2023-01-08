@@ -9,6 +9,30 @@ $('document').ready(function(){
 }, {
   offset: '60px'
 });
+
+//animation 
+    
+    $('.js--wp-1').waypoint(function(direction){
+        $('.js--wp-1').addClass('animated animate__fadeIn');
+    },{
+        offset:'55%'
+    });
+
+ $('.js--wp-2').waypoint(function(direction){
+        $('.js--wp-2').addClass('animated animate__slideInUp');
+    },{
+        offset:'80%'
+    });
+ $('.js--wp-3').waypoint(function(direction){
+        $('.js--wp-3').addClass('animated animate__slideInRight');
+    },{
+        offset:'80%'
+    });
+ $('.js--wp-4').waypoint(function(direction){
+        $('.js--wp-4').addClass('animated animate__bounceInUp');
+    },{
+        offset:'70%'
+    });
     
 //smooth scroll
     

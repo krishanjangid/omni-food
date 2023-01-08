@@ -478,3 +478,25 @@ footer p{
 .sticky .main-nav{
     margin-top:15px;
 }
+.js--wp-1{
+    opacity: 0;
+    animation-duration: 1s;
+}
+.js--wp-2{
+    opacity: 0;
+    animation-duration: 1s;
+}
+.js--wp-3{
+    opacity: 0;
+    animation-duration: 1s;
+}
+.js--wp-4{
+    opacity: 0;
+    animation-duration: 0.9s;
+}
+.js--wp-1,
+.js--wp-2,
+.js--wp-3,
+.js--wp-4.animated{
+    opacity: 1;
+}
