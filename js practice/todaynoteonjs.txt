@@ -1,69 +1,127 @@
-ctrl+shift+i - 
-alert("hello"); can be strings,number.
-var x=10; number boolean string
-from typeof function we can check which type of data is
+var output=[];
+var count=1;
+function fizzBuzz(){
+while(count<=100){
+if(count%3==0 && count%5==0){
+output.push("fizzBuzz");
+}else if(count%3==0){
+output.push("fizz");
+}else if(count%5==0){
+output.push("buzz");
+}
+else{
+output.push(count);
+}
+count++;
+}
+console.log(output);
 
-shift+enter for the next line in console
-in source we can do code of js
+}
 
-var yourname=prompt("enter your name");
-alert("hello " + yourname + ",my name is " + myname );
+/////
 
-var print=prompt("enter your message");
-alert(print);
- 
-alert(print.length); //length is the property here
+var output=[];
+function fizzBuzz(){
+for(var count=1;count<=100;count++){
+if(count%3==0 && count%5==0){
+output.push("fizzBuzz");
+}else if(count%3==0){
+output.push("fizz");
+}else if(count%5==0){
+output.push("buzz");
+}
+else{
+output.push(count);
+}
+}
+console.log(output);
 
-var print=prompt("enter your message");
-var length=print.length;
-var total=140-length;
-alert("you have entered" + length + "Remaining are" + total);
+}
 
-name.slice(0,1);
-name.slice(1);
-name.slice(-1); // last character
+// while loop is for state , the condition is true then only loop will be execute.
+// for loop is for iteration.
 
-var print=prompt("enter your message");
-// var length=print.length;
-// var total=140-length;
-alert("you have entered" + print.length + "Remaining are" + (140-print.length));
-alert(print.slice(0,140));
+task = factorial of a number , fabonacci series of given number.
+tool = html tree generator.
 
-->var name=prompt("enter your name");
-var uppername =name.slice(0,1).toUpperCase();
-var lowername =name.slice(1).toLowerCase();
-alert(uppername + lowername);
+document
+document.firstElementChild
+document.firstElementChild.firstElementChild
+document.firstElementChild.lastElementChild
+document.firstElementChild.lastElementChild.firstElementChild
+var heading=document.firstElementChild.lastElementChild.firstElementChild
+heading.innerHTML="Good Bye";
 
-->var name=prompt("enter your name");
-alert(name.slice(0,1).toUpperCase() + name.slice(1).toLowerCase());
-
-->console.log (output for us)
--> alert (for the clients/end user)
--> (===)called the identical operator which check the value + datatype too.
-
-var a=10;
-var b='10';
-if (a===b) {
-    alert("values are same");
+//fabonacci
+function fabonacci(n){
+var output=[];
+if(n==1){
+output=[0];
+}else if(n==2){
+output=[0,1];
 }else{
-    alert("values are different");
+output=[0,1];
+for(var x=3;x<=n;x++){
+output.push(output[output.length-2]+output[output.length-1]);
 }
+}
+return output;
+}
+console.log(fabonacci(1));
 
--> function getMilk() {
-    console.log("move up");
-    console.log("move down");
-    console.log("move");
-    console.log("move");
-    console.log("get milk");
-}
+// basic structure
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1 id="title">DOM</h1>
+    <input type="checkbox" name="" value="">
+    <button type="button" class="btn" name="button"> click me</button>
+    <ul id="list">
+      <li class="item"><a href="https://www.google.com">Google</a></li>
+      <li class="item">second</li>
+      <li class="item">third</li>
+    </ul>
+  </body>
+</html>
 
-->function getMilk(money) {
-    console.log("move up");
-    console.log("move down");
-    console.log("move");
-    console.log("move");
-    var numBottles= Math.floor(money/45);
-    console.log("get " + numBottles +" bottles of milk" );
-    return money%45;
-}
-console.log("your change amount is " + getMilk(100));
+document.getElementsByTagName("h1");
+document.querySelector("h1");
+document.getElementById("title");
+
+heading.innerHTML="Good Bye";
+heading.style.color="red";
+heading.style.fontSize="3rem";
+document.querySelector("h1").innerHTML;
+document.querySelector(".btn");
+document.getElementsByClassName("btn");
+document.querySelector("button");
+document.querySelector("input").click();
+document.querySelector(".btn");
+document.querySelector("li");
+document.querySelector("li a");
+document.querySelector("li.item");
+document.querySelector("ul a");
+document.querySelector("#list a");
+document.querySelectorAll("li");
+document.querySelectorAll("li")[1];
+document.querySelectorAll("li")[1].style.color="yellow";
+document.querySelectorAll("li")[2].style.color="green";
+document.querySelectorAll(".btn").style.color="red"; // error
+document.querySelectorAll(".btn")[0].style.color="red";
+document.querySelector("li a").attributes;
+document.querySelector("li a").getAttribute("href");
+document.querySelector("li a").setAttribute("href","https://www.youtube.com");
+document.querySelector("button").classList;
+document.querySelector("button").classList.add("invisible");
+document.querySelector("button").classList.remove("invisible");
+document.querySelector("button").classList.toggle("invisible");
+document.querySelector("h1").textContent;
+document.querySelector("h1").innerHTML="<em>good bye</em>";
+document.querySelector("h1").textContent="<em>good bye</em>";
+
+
+
